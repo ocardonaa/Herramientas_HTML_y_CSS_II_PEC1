@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>Main Page</title>
   </head>
   <body>
+    <!--
     <div class="uoc-container">
       <picture>
         <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
@@ -20,6 +21,20 @@
         Program in Web App and Website Development at the Universitat Oberta de
         Catalunya.
       </p>
+    </div>
+     -->
+    <include src="./views//header.html"></include>
+    <div class="MainContainer">
+      <p class="MainContainer__whyVisitMoscow">
+        Moscú, la vibrante capital de Rusia, combina historia y modernidad con lugares icónicos como la Plaza Roja y el Kremlin, 
+        además de museos de clase mundial como la Galería Tretyakov. Su escena cultural, con el legendario Teatro Bolshoi y una 
+        gastronomía diversa, cautiva a todo viajero. Las estaciones de metro, auténticos palacios subterráneos, y el encanto 
+        estacional, desde mercados navideños hasta parques veraniegos, hacen de Moscú un destino inolvidable.
+      </p>
+      <figure class="figureMainPhoto">
+        <img src="../src/assets/images/catedral-san-basilio.webp" alt="Catedral de San Basilio" class="figureMainPhoto__imgPhoto">
+        <figcaption>Catedral de San Basilio, foto de Pixabay</figcaption>
+      </figure>
     </div>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

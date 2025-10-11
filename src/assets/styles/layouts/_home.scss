@@ -1,4 +1,5 @@
 @use "../variables";
+@use "../mixins/mixins" as m;
 
 * {
   box-sizing: border-box;
@@ -9,14 +10,54 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  padding: 2rem;
+  padding-top: 3rem;
   font-family: variables.$font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: variables.$uoc-bg;
-  color: variables.$uoc-corporate;
+  font-size: 1em;
+  line-height: 1.5em;
+  background-color: variables.$main-container;
+  color: variables.$font-color-main;
 }
 
+.MainContainer {
+  &__visitMoscow {
+    background-color: variables.$info-container;
+    color: whitesmoke;
+    @include m.center-object;
+
+    @include m.responsive('phone') {
+      padding: 1em;
+    }
+
+    @include m.responsive('tablet') {
+      padding: 2em;
+    }
+
+    @include m.responsive('desktop') {
+      font-size: 2em;
+    }
+  }
+
+  &__whyVisitMoscow {
+    margin: 10%;
+    @include m.responsive('desktop') {
+      line-height: 1.8em;
+    }
+  }
+
+  .figureMainPhoto {
+    &__imgPhoto {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+    }
+  }
+}
+
+/*
 .uoc-container {
   max-width: 800px;
   margin: auto;
@@ -57,3 +98,5 @@ body {
   font-size: 0.75rem;
   text-align: center;
 }
+
+*/

@@ -8,5 +8,20 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 $uoc-corporate: #000078;
 $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
 $mqMinWidth: 420px;
+
+// seguramente mucho de lo de arriba se borre
+
+$main-container: beige;
+$info-container: #ff2800;
+$font-color-main: #3b3131;
+
+$phone-size-max: 400px;
+$tablet-size-max: 800px;
+$desktop-size-max: 1200px;
+
+$breakpoints: (
+  'phone': $phone-size-max,
+  'tablet': $tablet-size-max,
+  'desktop': $desktop-size-max
+);
