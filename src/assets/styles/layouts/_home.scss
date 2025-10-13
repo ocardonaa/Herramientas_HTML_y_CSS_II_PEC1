@@ -33,21 +33,16 @@ body {
         text-align: center;
       }
 
-      @include m.responsive('small-tablet') {
-        padding: 2.5em;
+      @include m.responsive('tablet') {
+        padding: 1.5em;
         line-height: 2em;
         text-align: center;
-      }
-
-      @include m.responsive('big-tablet') {
-        padding: 3em;
-        line-height: 1em;
-        text-align: center;
+        font-size: 3em;
       }
 
       @include m.responsive('desktop') {
-        font-size: 3em;
-        padding: 3em;
+        font-size: 4em;
+        padding: 2em;
       }
     }
   }
@@ -59,10 +54,6 @@ body {
     padding-left: 10%;
     border-radius: 0 10% 10% 0 / 0 50% 50% 0;
 
-    @include m.responsive('big-tablet') {
-      border-radius: 0 5% 5% 0 / 0 50% 50% 0;
-    }
-
     @include m.responsive('desktop') {
       border-radius: 0 5% 5% 0 / 0 50% 50% 0;
     }
@@ -72,33 +63,38 @@ body {
         padding: 1em;
       }
 
-      @include m.responsive('small-tablet') {
+      @include m.responsive('tablet') {
         padding: 1.2em;
       }
 
-      @include m.responsive('big-tablet') {
-        padding: 1.4em;
-      }
-
       @include m.responsive('desktop') {
-        padding: 1.6em;
+        padding: 2em;
+        font-size: 2em;
       }
     }
   }
 
   &__why-visit-moscow {
-    margin: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    @include m.responsive('phone') {
+      line-height: 1.8em;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    @include m.responsive('tablet') {
+      font-size: larger;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
 
     @include m.responsive('desktop') {
       line-height: 1.8em;
-    }
-
-    @include m.responsive('small-tablet') {
-      font-size: larger;
-    }
-
-    @include m.responsive('big-tablet') {
-      font-size: larger;
+      margin-top: 3em;
+      margin-bottom: 3em;
+      font-size: 1.8em;
     }
   }
 
@@ -118,17 +114,28 @@ body {
       width: 80%;
     }
 
-    @include m.responsive('small-tablet') {
+    @include m.responsive('tablet') {
       width: 70%;
     }
 
-    @include m.responsive('big-tablet') {
+    @include m.responsive('desktop') {
       width: 60%;
     }
   }
 
   &__main-caption {
-    font-size: 0.8em;
     margin-top: 0;
+
+    @include m.responsive('phone') {
+      font-size: 0.8em;
+    }
+
+    @include m.responsive('tablet') {
+      font-size: 1em;
+    }
+
+    @include m.responsive('desktop') {
+      font-size: 1.2em;
+    }
   }
 }

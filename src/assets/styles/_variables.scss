@@ -16,14 +16,12 @@ $main-container: beige;
 $info-container: #ff2800;
 $font-color-main: #3b3131;
 
-$phone-size-max: 480px;
-$small-tablet-size-max: 768px;
-$big-tablet-size-max: 1440px;
-$desktop-size-max: 1920px;
+$phone: 480px;
+$tablet: 768px;
+$desktop: 1440px;
 
 $breakpoints: (
-  'phone': $phone-size-max,
-  'small-tablet': $small-tablet-size-max,
-  'big-tablet': $big-tablet-size-max,
-  'desktop': $desktop-size-max
+  'phone': $phone,
+  'tablet': $tablet,
+  'desktop': $desktop
 );
