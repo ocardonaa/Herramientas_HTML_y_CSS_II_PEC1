@@ -10,6 +10,7 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  padding: 0;
   padding-top: 3rem;
   font-family: variables.$font-family-sans-serif;
   font-size: 1em;
@@ -18,85 +19,116 @@ body {
   color: variables.$font-color-main;
 }
 
-.MainContainer {
-  &__visitMoscow {
+.main-container {
+  &__visit-moscow {
+    @include m.center-object;
     background-color: variables.$info-container;
     color: whitesmoke;
-    @include m.center-object;
 
-    @include m.responsive('phone') {
-      padding: 1em;
-    }
+    &__header-elem {
+      @include m.responsive('phone') {
+        padding: 2em;
+        line-height: 1em;
+        margin: 0;
+        text-align: center;
+      }
 
-    @include m.responsive('tablet') {
-      padding: 2em;
-    }
+      @include m.responsive('small-tablet') {
+        padding: 2.5em;
+        line-height: 2em;
+        text-align: center;
+      }
 
-    @include m.responsive('desktop') {
-      font-size: 2em;
+      @include m.responsive('big-tablet') {
+        padding: 3em;
+        line-height: 1em;
+        text-align: center;
+      }
+
+      @include m.responsive('desktop') {
+        font-size: 3em;
+        padding: 3em;
+      }
     }
   }
 
-  &__whyVisitMoscow {
+  &__second-title-container {
+    background-color: variables.$info-container;
+    color: whitesmoke;
+    margin-right: 10%;
+    padding-left: 10%;
+    border-radius: 0 10% 10% 0 / 0 50% 50% 0;
+
+    @include m.responsive('big-tablet') {
+      border-radius: 0 5% 5% 0 / 0 50% 50% 0;
+    }
+
+    @include m.responsive('desktop') {
+      border-radius: 0 5% 5% 0 / 0 50% 50% 0;
+    }
+
+    &__second-title {
+      @include m.responsive('phone') {
+        padding: 1em;
+      }
+
+      @include m.responsive('small-tablet') {
+        padding: 1.2em;
+      }
+
+      @include m.responsive('big-tablet') {
+        padding: 1.4em;
+      }
+
+      @include m.responsive('desktop') {
+        padding: 1.6em;
+      }
+    }
+  }
+
+  &__why-visit-moscow {
     margin: 10%;
+
     @include m.responsive('desktop') {
       line-height: 1.8em;
     }
-  }
 
-  .figureMainPhoto {
-    &__imgPhoto {
-      width: 100%;
-      height: auto;
-      margin: 0;
+    @include m.responsive('small-tablet') {
+      font-size: larger;
     }
 
-    figcaption {
-      font-size: 0.8em;
+    @include m.responsive('big-tablet') {
+      font-size: larger;
     }
   }
+
 }
 
-/*
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+.main-photo-picture {
+  @include m.center-object;
+  text-align: left;
+  flex-direction: column;
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+  &__main-photo {
+    height: auto;
+    margin-bottom: 2em;
+    border-radius: 5%;
 
-  @media (min-width: variables.$mqMinWidth) {
-    max-width: none;
+    @include m.responsive('phone') {
+      width: 80%;
+    }
+
+    @include m.responsive('small-tablet') {
+      width: 70%;
+    }
+
+    @include m.responsive('big-tablet') {
+      width: 60%;
+    }
+  }
+
+  &__main-caption {
+    font-size: 0.8em;
+    margin-top: 0;
   }
 }
-
-.uoc-title {
-  font-family: variables.$font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: variables.$uoc-corporate;
-
-  @media (min-width: variables.$mqMinWidth) {
-    font-size: 36px;
-  }
-}
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-*/

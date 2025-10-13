@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>Main Page</title>
-  </head>
-  <body>
-    <!--
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>Main Page</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <section class="section-info">
+      <include src="./views/header.html"></include>
+      <p class="main-container__why-visit-moscow">
+        Moscú, capital de Rusia, es una ciudad con una rica historia que abarca desde los zares hasta la era soviética,
+        visible en lugares como el Kremlin y la Plaza Roja. Su gastronomía deleita con platos tradicionales como el
+        borscht y los blinis, junto a una vibrante escena culinaria moderna. La gente de Moscú, conocida por su calidez
+        y
+        diversidad, da vida a esta metrópoli cultural con su pasión por el arte, la música y las tradiciones.
       </p>
-    </div>
-     -->
-    <include src="./views//header.html"></include>
-    <div class="MainContainer">
-      <p class="MainContainer__whyVisitMoscow">
-        Moscú, la vibrante capital de Rusia, combina historia y modernidad con lugares icónicos como la Plaza Roja y el Kremlin, 
-        además de museos de clase mundial como la Galería Tretyakov. Su escena cultural, con el legendario Teatro Bolshoi y una 
-        gastronomía diversa, cautiva a todo viajero. Las estaciones de metro, auténticos palacios subterráneos, y el encanto 
+    </section>
+    <picture class="main-photo-picture">
+      <source media="(width < 481px)" srcset="./assets/images/catedral-san-basilio-phone.jpg">
+      <source media="(width < 768px)" srcset="./assets/images/catedral-san-basilio-phone.jpg">
+      <source media="(width < 1441px)" srcset="./assets/images/catedral-san-basilio-tablet.jpg">
+      <img src="../src/assets/images/catedral-san-basilio.webp" class="main-photo-picture__main-photo"
+        alt="Catedral de San Basilio" loading="lazy">
+      <p class="main-photo-picture__main-caption">Catedral de San Basilio, foto de Pixibay</p>
+    </picture>
+    <section class="section-info">
+      <div class="main-container__second-title-container">
+        <h2 class="main-container__second-title-container__second-title">¿Por qué visitar Moscú?</h2>
+      </div>
+      <p class="main-container__why-visit-moscow">
+        Moscú, la vibrante capital de Rusia, combina historia y modernidad con lugares icónicos como la Plaza Roja y el
+        Kremlin,
+        además de museos de clase mundial como la Galería Tretyakov. Su escena cultural, con el legendario Teatro
+        Bolshoi
+        y una
+        gastronomía diversa, cautiva a todo viajero. Las estaciones de metro, auténticos palacios subterráneos, y el
+        encanto
         estacional, desde mercados navideños hasta parques veraniegos, hacen de Moscú un destino inolvidable.
       </p>
-      <figure class="figureMainPhoto">
-        <img src="../src/assets/images/catedral-san-basilio.webp" alt="Catedral de San Basilio" class="figureMainPhoto__imgPhoto">
-        <figcaption>Catedral de San Basilio, foto de Pixabay</figcaption>
-      </figure>
-    </div>
+    </section>
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+  </main>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>
