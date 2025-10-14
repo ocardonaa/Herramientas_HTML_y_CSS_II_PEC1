@@ -5,35 +5,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"">
-  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link rel=" stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
   <title>Main Page</title>
 </head>
 
 <body>
   <main class="main-container">
-    <section class="section-info">
-      <include src="./views/header.html"></include>
-      <p class="main-container__why-visit-moscow">
+    <include src="../src/views/header.html"></include>
+    <section class="main-container__section main-container__section--with-image">
+      <p class="main-container__section__text">
         Moscú, capital de Rusia, es una ciudad con una rica historia que abarca desde los zares hasta la era soviética,
         visible en lugares como el Kremlin y la Plaza Roja. Su gastronomía deleita con platos tradicionales como el
         borscht y los blinis, junto a una vibrante escena culinaria moderna. La gente de Moscú, conocida por su calidez
         y
         diversidad, da vida a esta metrópoli cultural con su pasión por el arte, la música y las tradiciones.
       </p>
+      <picture class="photo-picture photo-picture--hero">
+        <source media="(width < 481px)" srcset="./assets/images/catedral/catedral-san-basilio-phone.jpg">
+        <source media="(width < 768px)" srcset="./assets/images/catedral/catedral-san-basilio-phone.jpg">
+        <source media="(width < 1441px)" srcset="./assets/images/catedral/catedral-san-basilio-tablet.jpg">
+        <img src="./assets/images/catedral/catedral-san-basilio.webp" class="photo-picture__photo"
+          alt="Catedral de San Basilio" loading="eager">
+        <p class="photo-picture__caption">Catedral de San Basilio, foto de Pixabay</p>
+      </picture>
     </section>
-    <picture class="main-photo-picture">
-      <source media="(width < 481px)" srcset="./assets/images/catedral/catedral-san-basilio-phone.jpg">
-      <source media="(width < 768px)" srcset="./assets/images/catedral/catedral-san-basilio-phone.jpg">
-      <source media="(width < 1441px)" srcset="./assets/images/catedral/catedral-san-basilio-tablet.jpg">
-      <img src="../src/assets/images/catedral/catedral-san-basilio.webp" class="main-photo-picture__main-photo"
-        alt="Catedral de San Basilio" loading="eager">
-      <p class="main-photo-picture__main-caption">Catedral de San Basilio, foto de Pixibay</p>
-    </picture>
-    <section class="section-info">
-      <div class="main-container__second-title-container">
-        <h2 class="main-container__second-title-container__second-title"><i class="fa-solid fa-plane"></i> ¿Por qué visitar Moscú?</h2>
+
+    <section class="main-container__section">
+      <div class="main-container__section__second-title-container">
+        <h2 class="main-container__section__second-title"><i
+            class="fa-solid fa-plane main-container__section__icon"></i> ¿Por qué
+          visitar Moscú?</h2>
       </div>
-      <p class="main-container__why-visit-moscow">
+      <p class="main-container__section__text main-container__section__text--margins">
         Moscú, la vibrante capital de Rusia, combina historia y modernidad con lugares icónicos como la Plaza Roja y el
         Kremlin,
         además de museos de clase mundial como la Galería Tretyakov. Su escena cultural, con el legendario Teatro
@@ -44,6 +47,55 @@
         estacional, desde mercados navideños hasta parques veraniegos, hacen de Moscú un destino inolvidable.
       </p>
     </section>
+
+    <div class="locations">
+      <section class="locations__section--normal">
+        <div class="locations__section__content">
+          <h2 class="locations__section__title">
+            La Plaza Roja
+          </h2>
+          <p class="locations__section__text">
+            La Plaza Roja, corazón de Moscú, impresiona con su historia y monumentos icónicos como el Kremlin y San
+            Basilio.
+          </p>
+        </div>
+        <img class="locations__section__image"
+          srcSet="./assets/images/plaza-roja/plaza-roja-phone.jpg 960w, ./assets/images/plaza-roja/plaza-roja-tablet.jpg 1536w, ./assets/images/plaza-roja/plaza-roja-desktop.jpg 2880w"
+          sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
+          src="./assets/images/plaza-roja/plaza-roja.jpg" alt="Plaza Roja">
+
+      </section>
+      <section class="locations__section--reverse">
+        <div class="locations__section__content">
+          <h2 class="locations__section__title">
+            Centro comercial GUM
+          </h2>
+          <p class="locations__section__text">
+            El centro comercial GUM combina elegancia histórica con tiendas de lujo en un entorno arquitectónico único.
+          </p>
+        </div>
+        <img class="locations__section__image"
+          srcSet="./assets/images/tienda-gum/tienda-gum-phone.jpg 960w, ./assets/images/tienda-gum/tienda-gum-tablet.jpg 1536w, ./assets/images/tienda-gum/tienda-gum-desktop.jpg 2880w"
+          sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
+          src="./assets/images/tienda-gum/gum-department-store.jpg" alt="Centro comercial GUM">
+      </section>
+      <section class="locations__section--normal">
+        <div class="locations__section__content">
+          <h2 class="locations__section__title">
+            El Teatro Bolshoi
+          </h2>
+          <p class="locations__section__text">
+            El Teatro Bolshoi, mundialmente famoso, ofrece espectáculos de ballet y ópera de primer nivel en un
+            escenario legendario.
+          </p>
+        </div>
+        <img class="locations__section__image"
+          srcSet="./assets/images/teatro-bolshoi/teatro-bolshoi-phone.jpg 960w, ./assets/images/teatro-bolshoi/teatro-bolshoi-tablet.jpg 1536w, ./assets/images/teatro-bolshoi/teatro-bolshoi-desktop.jpg 2880w"
+          sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
+          src="./assets/images/teatro-bolshoi/teatro-bolshoi.jpg" alt="Teatro Bolshoi">
+      </section>
+    </div>
+
     <include src="./views/footer.html"></include>
   </main>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

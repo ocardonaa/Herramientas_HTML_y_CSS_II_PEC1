@@ -20,42 +20,38 @@ body {
 }
 
 .main-container {
-  &__visit-moscow {
-    @include m.center-object;
-    background-color: variables.$info-container;
-    color: whitesmoke;
 
-    &__header-elem {
+  &__section {
+
+    &--with-image {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    &__text {
       @include m.responsive('phone') {
-        padding: 2em;
-        line-height: 1em;
-        margin: 0;
-        text-align: center;
+        line-height: 1.8em;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
       }
 
       @include m.responsive('tablet') {
-        padding: 1.5em;
-        line-height: 2em;
-        text-align: center;
-        font-size: 3em;
+        font-size: larger;
+        margin-top: 2em;
+        margin-bottom: 2em;
       }
 
       @include m.responsive('desktop') {
-        font-size: 4em;
-        padding: 2em;
+        line-height: 1.8em;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        font-size: 1.8em;
       }
-    }
-  }
 
-  &__second-title-container {
-    background-color: variables.$info-container;
-    color: whitesmoke;
-    margin-right: 10%;
-    padding-left: 10%;
-    border-radius: 0 10% 10% 0 / 0 50% 50% 0;
-
-    @include m.responsive('desktop') {
-      border-radius: 0 5% 5% 0 / 0 50% 50% 0;
+      &--margins {
+        margin-right: 10%;
+        margin-left: 10%;
+      }
     }
 
     &__second-title {
@@ -72,40 +68,39 @@ body {
         font-size: 2em;
       }
     }
-  }
 
-  &__why-visit-moscow {
-    margin-left: 10%;
-    margin-right: 10%;
+    &__second-title-container {
+      background-color: variables.$info-container;
+      color: whitesmoke;
+      margin-right: 10%;
+      padding-left: 10%;
+      border-radius: 0 10% 10% 0 / 0 50% 50% 0;
 
-    @include m.responsive('phone') {
-      line-height: 1.8em;
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
+      @include m.responsive('desktop') {
+        border-radius: 0 5% 5% 0 / 0 50% 50% 0;
+      }
     }
 
-    @include m.responsive('tablet') {
-      font-size: larger;
-      margin-top: 2em;
-      margin-bottom: 2em;
+    &__icon {
+      font-size: 0.8em
     }
 
-    @include m.responsive('desktop') {
-      line-height: 1.8em;
-      margin-top: 3em;
-      margin-bottom: 3em;
-      font-size: 1.8em;
-    }
+
   }
 
 }
 
-.main-photo-picture {
-  @include m.center-object;
-  text-align: left;
-  flex-direction: column;
+.photo-picture {
 
-  &__main-photo {
+
+  &--hero {
+    @include m.center-object;
+    text-align: left;
+    flex-direction: column;
+  }
+
+
+  &__photo {
     height: auto;
     margin-bottom: 2em;
     border-radius: 5%;
@@ -123,7 +118,7 @@ body {
     }
   }
 
-  &__main-caption {
+  &__caption {
     margin-top: 0;
 
     @include m.responsive('phone') {
@@ -138,4 +133,84 @@ body {
       font-size: 1.2em;
     }
   }
+}
+
+.site-header {
+  &--colors {
+    @include m.center-object;
+    background-color: variables.$info-container;
+    color: whitesmoke;
+  }
+
+  &__title {
+    @include m.responsive('phone') {
+      padding: 2em;
+      line-height: 1em;
+      margin: 0;
+      text-align: center;
+    }
+
+    @include m.responsive('tablet') {
+      padding: 1.5em;
+      line-height: 2em;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    @include m.responsive('desktop') {
+      font-size: 4em;
+      padding: 2em;
+    }
+  }
+
+}
+
+.locations {
+  @include m.responsive('desktop') {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__section {
+
+    &--normal {
+
+      @include m.responsive('phone') {
+        display: block;
+      }
+
+      @include m.responsive('tablet') {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+      }
+
+      background-color: green;
+
+    }
+
+    &--reverse {
+      background-color: blue;
+
+      @include m.responsive('tablet') {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: space-around;
+      }
+
+    }
+
+    &__content {
+      flex: 1;
+    }
+
+    &__title {}
+
+    &__text {}
+
+    &__image {
+    }
+  }
+
+
 }
