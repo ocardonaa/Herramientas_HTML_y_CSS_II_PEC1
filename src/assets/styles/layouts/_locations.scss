@@ -1,0 +1,124 @@
+@use "../variables";
+@use "../mixins/mixins" as m;
+
+.locations {
+
+  display: block;
+  @include m.margin-left-right(10%, 10%);
+
+  @include m.responsive('desktop') {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__section {
+
+    @include m.padding-top-bottom(1em, 1em);
+
+    @include m.responsive('tablet') {
+      display: flex;
+      justify-content: space-around;
+      flex: 1;
+    }
+
+    @include m.responsive('desktop') {
+      display: block;
+    }
+
+    &--normal {
+
+      @include m.responsive('tablet') {
+        flex-flow: row wrap;
+      }
+    }
+
+    &--reverse {
+
+      @include m.responsive('tablet') {
+        flex-flow: row-reverse wrap;
+      }
+
+    }
+
+    &__content {
+      @include m.responsive('phone') {
+        text-align: center;
+      }
+
+      @include m.responsive('tablet') {
+        @include m.margin-left-right(0, 1em);
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: fit-content;
+      }
+
+      @include m.responsive('desktop') {
+        @include m.margin-left-right(0, 0);
+        display: block;
+        text-align: center
+      }
+
+      &--reverse {
+        @include m.responsive('tablet') {
+          @include m.margin-left-right(1em, 0);
+        }
+
+        @include m.responsive('desktop') {
+          @include m.margin-left-right(1em, 1em);
+        }
+      }
+    }
+
+    &__title {
+      background-color: variables.$info-container;
+      color: whitesmoke;
+      width: fit-content;
+      @include m.padding-top-bottom(1em, 1em);
+
+      @include m.responsive('phone') {
+        border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+        @include m.padding-left-right(1.5em, 1.5em);
+        @include m.responsive('phone') {
+        display: inline-block;
+      }
+      }
+
+      @include m.responsive('tablet') {
+        border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+        @include m.padding-left-right(1em, 1em);
+      }
+
+      @include m.responsive('desktop') {
+        border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+      }
+    }
+
+    &__text {
+      text-align: left;
+
+      @include m.responsive('phone') {
+        @include m.margin-top-bottom(1em, 2em);
+      }
+
+
+      @include m.responsive('tablet') {
+        @include m.margin-left-right(1em, 1em);
+        @include m.margin-top-bottom(0em, 2em);
+        position: absolute;
+        top: 50%;
+        font-size: larger;
+        line-height: 1.5em;
+      }
+
+      @include m.responsive('desktop') {
+        @include m.margin-top-bottom(1em, 2em);
+        @include m.margin-left-right(1em, 1em);
+        font-size: 1.6em;
+        position: relative;
+      }
+    }
+  }
+}

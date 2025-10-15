@@ -24,33 +24,28 @@ body {
   &__section {
 
     &--with-image {
-      margin-left: 10%;
-      margin-right: 10%;
+      @include m.margin-left-right(10%, 10%);
     }
 
     &__text {
       @include m.responsive('phone') {
         line-height: 1.8em;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
+        @include m.margin-top-bottom(1.5em, 1.5em);
       }
 
       @include m.responsive('tablet') {
         font-size: larger;
-        margin-top: 2em;
-        margin-bottom: 2em;
+        @include m.margin-top-bottom(2em, 2em);
       }
 
       @include m.responsive('desktop') {
         line-height: 1.8em;
-        margin-top: 3em;
-        margin-bottom: 3em;
-        font-size: 1.8em;
+        font-size: 1.6em;
+        @include m.margin-top-bottom(3em, 3em);
       }
 
       &--margins {
-        margin-right: 10%;
-        margin-left: 10%;
+        @include m.margin-left-right(10%, 10%);
       }
     }
 
@@ -72,8 +67,8 @@ body {
     &__second-title-container {
       background-color: variables.$info-container;
       color: whitesmoke;
-      margin-right: 10%;
       padding-left: 10%;
+      margin-right: 10%;
       border-radius: 0 10% 10% 0 / 0 50% 50% 0;
 
       @include m.responsive('desktop') {
@@ -88,51 +83,6 @@ body {
 
   }
 
-}
-
-.photo-picture {
-
-
-  &--hero {
-    @include m.center-object;
-    text-align: left;
-    flex-direction: column;
-  }
-
-
-  &__photo {
-    height: auto;
-    margin-bottom: 2em;
-    border-radius: 5%;
-
-    @include m.responsive('phone') {
-      width: 80%;
-    }
-
-    @include m.responsive('tablet') {
-      width: 70%;
-    }
-
-    @include m.responsive('desktop') {
-      width: 60%;
-    }
-  }
-
-  &__caption {
-    margin-top: 0;
-
-    @include m.responsive('phone') {
-      font-size: 0.8em;
-    }
-
-    @include m.responsive('tablet') {
-      font-size: 1em;
-    }
-
-    @include m.responsive('desktop') {
-      font-size: 1.2em;
-    }
-  }
 }
 
 .site-header {
@@ -162,55 +112,5 @@ body {
       padding: 2em;
     }
   }
-
-}
-
-.locations {
-  @include m.responsive('desktop') {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  &__section {
-
-    &--normal {
-
-      @include m.responsive('phone') {
-        display: block;
-      }
-
-      @include m.responsive('tablet') {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-      }
-
-      background-color: green;
-
-    }
-
-    &--reverse {
-      background-color: blue;
-
-      @include m.responsive('tablet') {
-        display: flex;
-        flex-flow: row-reverse wrap;
-        justify-content: space-around;
-      }
-
-    }
-
-    &__content {
-      flex: 1;
-    }
-
-    &__title {}
-
-    &__text {}
-
-    &__image {
-    }
-  }
-
 
 }

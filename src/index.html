@@ -26,7 +26,7 @@
         <source media="(width < 1441px)" srcset="./assets/images/catedral/catedral-san-basilio-tablet.jpg">
         <img src="./assets/images/catedral/catedral-san-basilio.webp" class="photo-picture__photo"
           alt="Catedral de San Basilio" loading="eager">
-        <p class="photo-picture__caption">Catedral de San Basilio, foto de Pixabay</p>
+        <p class="photo-picture__caption">Catedral de San Basilio, fotografia de Pixabay</p>
       </picture>
     </section>
 
@@ -49,7 +49,7 @@
     </section>
 
     <div class="locations">
-      <section class="locations__section--normal">
+      <section class="locations__section locations__section--normal">
         <div class="locations__section__content">
           <h2 class="locations__section__title">
             La Plaza Roja
@@ -59,14 +59,18 @@
             Basilio.
           </p>
         </div>
-        <img class="locations__section__image"
-          srcSet="./assets/images/plaza-roja/plaza-roja-phone.jpg 960w, ./assets/images/plaza-roja/plaza-roja-tablet.jpg 1536w, ./assets/images/plaza-roja/plaza-roja-desktop.jpg 2880w"
-          sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
-          src="./assets/images/plaza-roja/plaza-roja.jpg" alt="Plaza Roja">
+        <picture class="photo-picture photo-picture--hero">
+          <img class="photo-picture__photo photo-picture__photo--places-resize"
+            srcSet="./assets/images/plaza-roja/plaza-roja-phone.jpg 960w, ./assets/images/plaza-roja/plaza-roja-tablet.jpg 1536w, ./assets/images/plaza-roja/plaza-roja-desktop.jpg 2880w"
+            sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
+            src="./assets/images/plaza-roja/plaza-roja.jpg" alt="Plaza Roja" loading="lazy">
+          <p class="photo-picture__caption">Plaza Roja. fotografia de Pixabay</p>
+        </picture>
+
 
       </section>
-      <section class="locations__section--reverse">
-        <div class="locations__section__content">
+      <section class="locations__section locations__section--reverse">
+        <div class="locations__section__content locations__section__content--reverse">
           <h2 class="locations__section__title">
             Centro comercial GUM
           </h2>
@@ -74,12 +78,16 @@
             El centro comercial GUM combina elegancia histórica con tiendas de lujo en un entorno arquitectónico único.
           </p>
         </div>
-        <img class="locations__section__image"
-          srcSet="./assets/images/tienda-gum/tienda-gum-phone.jpg 960w, ./assets/images/tienda-gum/tienda-gum-tablet.jpg 1536w, ./assets/images/tienda-gum/tienda-gum-desktop.jpg 2880w"
-          sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
-          src="./assets/images/tienda-gum/gum-department-store.jpg" alt="Centro comercial GUM">
+        <picture class="photo-picture photo-picture--hero">
+          <img class="photo-picture__photo photo-picture__photo--places-resize"
+            srcSet="./assets/images/tienda-gum/tienda-gum-phone.jpg 960w, ./assets/images/tienda-gum/tienda-gum-tablet.jpg 1536w, ./assets/images/tienda-gum/tienda-gum-desktop.jpg 2880w"
+            sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
+            src="./assets/images/tienda-gum/gum-department-store.jpg" alt="Centro comercial GUM" loading="lazy">
+          <p class="photo-picture__caption">Centro comercial GUM, fotografia de Tripadvisor</p>
+        </picture>
+
       </section>
-      <section class="locations__section--normal">
+      <section class="locations__section locations__section--normal">
         <div class="locations__section__content">
           <h2 class="locations__section__title">
             El Teatro Bolshoi
@@ -89,13 +97,15 @@
             escenario legendario.
           </p>
         </div>
-        <img class="locations__section__image"
-          srcSet="./assets/images/teatro-bolshoi/teatro-bolshoi-phone.jpg 960w, ./assets/images/teatro-bolshoi/teatro-bolshoi-tablet.jpg 1536w, ./assets/images/teatro-bolshoi/teatro-bolshoi-desktop.jpg 2880w"
-          sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
-          src="./assets/images/teatro-bolshoi/teatro-bolshoi.jpg" alt="Teatro Bolshoi">
+        <picture class="photo-picture photo-picture--hero">
+          <img class="photo-picture__photo photo-picture__photo--places-resize"
+            srcSet="./assets/images/teatro-bolshoi/teatro-bolshoi-phone.jpg 960w, ./assets/images/teatro-bolshoi/teatro-bolshoi-tablet.jpg 1536w, ./assets/images/teatro-bolshoi/teatro-bolshoi-desktop.jpg 2880w"
+            sizes="(max-width: 767px) 480px, (min-width: 768px) and (max-width: 1440px) 768px, 1440px"
+            src="./assets/images/teatro-bolshoi/teatro-bolshoi.jpg" alt="Teatro Bolshoi" loading="lazy">
+          <p class="photo-picture__caption">Teatro Bolshoi, fotografia de Pixabay</p>
+        </picture>
       </section>
     </div>
-
     <include src="./views/footer.html"></include>
   </main>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
