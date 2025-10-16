@@ -1,0 +1,19 @@
+@use "../variables";
+@use "../mixins/mixins" as m;
+
+.link {
+  & {
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: variables.$font-color-main;
+    }
+
+    &:hover {
+      color: variables.$info-container;
+    }
+  }
+
+
+}

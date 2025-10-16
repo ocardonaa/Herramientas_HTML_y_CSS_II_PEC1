@@ -26,18 +26,20 @@
     }
 
     &--normal {
-
       @include m.responsive('tablet') {
         flex-flow: row wrap;
       }
     }
 
     &--reverse {
-
       @include m.responsive('tablet') {
         flex-flow: row-reverse wrap;
       }
 
+    }
+
+    &__icon {
+      font-size: 1em;
     }
 
     &__content {
@@ -58,7 +60,7 @@
       @include m.responsive('desktop') {
         @include m.margin-left-right(0, 0);
         display: block;
-        text-align: center
+        text-align: center;
       }
 
       &--reverse {
@@ -81,9 +83,7 @@
       @include m.responsive('phone') {
         border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
         @include m.padding-left-right(1.5em, 1.5em);
-        @include m.responsive('phone') {
         display: inline-block;
-      }
       }
 
       @include m.responsive('tablet') {
@@ -102,7 +102,6 @@
       @include m.responsive('phone') {
         @include m.margin-top-bottom(1em, 2em);
       }
-
 
       @include m.responsive('tablet') {
         @include m.margin-left-right(1em, 1em);

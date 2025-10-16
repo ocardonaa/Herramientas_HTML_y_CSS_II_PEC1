@@ -77,40 +77,9 @@ body {
     }
 
     &__icon {
-      font-size: 0.8em
+      font-size: 0.8em;
     }
 
-
-  }
-
-}
-
-.site-header {
-  &--colors {
-    @include m.center-object;
-    background-color: variables.$info-container;
-    color: whitesmoke;
-  }
-
-  &__title {
-    @include m.responsive('phone') {
-      padding: 2em;
-      line-height: 1em;
-      margin: 0;
-      text-align: center;
-    }
-
-    @include m.responsive('tablet') {
-      padding: 1.5em;
-      line-height: 2em;
-      text-align: center;
-      font-size: 3em;
-    }
-
-    @include m.responsive('desktop') {
-      font-size: 4em;
-      padding: 2em;
-    }
   }
 
 }
