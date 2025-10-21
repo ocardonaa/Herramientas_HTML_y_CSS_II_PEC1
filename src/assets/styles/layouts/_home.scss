@@ -14,28 +14,28 @@ body {
   font-family: variables.$font-family-sans-serif;
   font-size: 1em;
   line-height: 1.5em;
-  background-color: variables.$main-container;
-  color: variables.$font-color-main;
+  background-color: variables.$main-background;
+  color: variables.$main-font-color;
 }
 
 .link:link,
 .link:visited {
   text-decoration: none;
-  color: variables.$font-color-main;
+  color: variables.$main-font-color;
 }
 
 .link:hover {
-  color: variables.$info-container;
+  color: variables.$second-background;
 }
 
 .link--footer:link,
 .link--footer:visited {
   text-decoration: none;
-  color: whitesmoke;
+  color: variables.$second-font-color;
 }
 
 .link--footer:hover {
-  color: variables.$font-color-main;
+  color: variables.$main-font-color;
 }
 
 .main-container {
@@ -84,8 +84,8 @@ body {
     }
 
     &__second-title-container {
-      background-color: variables.$info-container;
-      color: whitesmoke;
+      background-color: variables.$second-background;
+      color: variables.$second-font-color;
       padding-left: 10%;
       margin-right: 10%;
       border-radius: 0 10% 10% 0 / 0 50% 50% 0;
@@ -107,8 +107,8 @@ body {
 
   &--colors {
     @include m.center-object;
-    background-color: variables.$info-container;
-    color: whitesmoke;
+    background-color: variables.$second-background;
+    color: variables.$second-font-color;
   }
 
   &__title {
@@ -209,8 +209,8 @@ body {
     }
 
     &__title {
-      background-color: variables.$info-container;
-      color: whitesmoke;
+      background-color: variables.$second-background;
+      color: variables.$second-font-color;
       width: fit-content;
       @include m.padding-top-bottom(1em, 1em);
 
@@ -309,8 +309,8 @@ body {
 
 .site-footer {
 
-  background-color: variables.$info-container;
-  color: whitesmoke;
+  background-color: variables.$second-background;
+  color: variables.$second-font-color;
   @include m.center-object;
   @include m.padding-left-right(10%, 10%);
 

@@ -50,6 +50,7 @@
     "stylelint-selector-bem-pattern": "^4.0.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.1.0"
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "animate.css": "^4.1.1"
   }
 }
