@@ -130,7 +130,7 @@ body {
       font-size: 4em;
       padding: 2em;
     }
-    
+
   }
 
 }
@@ -281,7 +281,7 @@ body {
     @include m.responsive('desktop') {
       width: 60%;
     }
-    
+
     &--places-resize {
       @include m.responsive('tablet') {
         width: 90%;
@@ -308,38 +308,38 @@ body {
 }
 
 .site-footer {
-    background-color: variables.$info-container;
-    color: whitesmoke;
-    @include m.center-object;
-    @include m.padding-left-right(10%, 10%);
+  background-color: variables.$info-container;
+  color: whitesmoke;
+  @include m.center-object;
+  @include m.padding-left-right(10%, 10%);
 
-    @include m.responsive('phone') {
-        @include m.margin-top-bottom(3em, 0);
-        @include m.padding-top-bottom(1em, 1em);
-        display: block;
-        text-align: center;
-    }
+  @include m.responsive('phone') {
+    @include m.margin-top-bottom(3em, 0);
+    @include m.padding-top-bottom(1em, 1em);
+    display: block;
+    text-align: center;
+  }
+
+  @include m.responsive('tablet') {
+    @include m.margin-top-bottom(2em, 0);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.responsive('desktop') {
+    @include m.margin-top-bottom(3em, 0);
+    @include m.padding-left-right(25%, 25%);
+  }
+
+  &__text {
 
     @include m.responsive('tablet') {
-        @include m.margin-top-bottom(2em, 0);
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+      font-size: larger;
     }
 
     @include m.responsive('desktop') {
-        @include m.margin-top-bottom(3em, 0);
-        @include m.padding-left-right(25%, 25%);
+      line-height: 1.8em;
+      font-size: 1.6em;
     }
-
-    &__text {
-
-        @include m.responsive('tablet') {
-            font-size: larger;
-        }
-
-        @include m.responsive('desktop') {
-            line-height: 1.8em;
-            font-size: 1.6em;
-        }
-    }
+  }
 }

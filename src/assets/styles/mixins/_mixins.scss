@@ -29,8 +29,8 @@
 
 @mixin responsive($size) {
     $query: map.get(vars.$breakpoints, $size);
+
     @media (min-width: $query) {
         @content;
     }
 }
-
